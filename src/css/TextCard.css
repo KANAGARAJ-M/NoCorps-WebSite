@@ -1,0 +1,87 @@
+.container {
+    width: 90%; /* Adjusted for better mobile fit */
+    /* max-width: 600px; */
+    margin: 20px auto;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.2), 
+                0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* Hover effect */
+.container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(255, 255, 255, 0.3), 
+                0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+/* Text container */
+.textContainer {
+    text-align: center; /* Centered for better mobile readability */
+}
+
+/* Title */
+.title {
+    font-size: 1.4rem; /* Scaled down for mobile */
+    font-weight: 700;
+    color: black;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+    margin-bottom: 10px;
+}
+
+/* Description */
+.description {
+    font-size: 0.95rem; /* Slightly smaller for better fit */
+    line-height: 1.5;
+    text-shadow: 1px 1px 6px rgba(0, 0, 0, 0.3);
+    /* text-align: center; */
+}
+
+/* List styling */
+.description ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* List items */
+.description li {
+    margin: 6px 0;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    /* justify-content: center; Centers text on mobile */
+}
+
+/* Bullet points */
+.description li::before {
+    content: "";
+    margin-right: 8px;
+    font-size: 1.2rem;
+    color: #00ff99;
+    text-shadow: 0px 0px 8px rgba(0, 255, 153, 0.8);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        width: 95%; /* Expands for smaller screens */
+        padding: 12px;
+    }
+
+    .title {
+        font-size: 1.2rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .description li {
+        font-size: 0.9rem;
+    }
+}

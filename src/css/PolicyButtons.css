@@ -1,0 +1,61 @@
+.policy-container {
+    text-align: center;
+    padding: 30px 20px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: #222;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.policy-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    color: #333;
+    background: linear-gradient(180deg, #ffffff 0%, #f0f0f0 100%);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glossy Reflection */
+.policy-btn::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0) 80%);
+    transform: rotate(45deg);
+    opacity: 0.3;
+}
+
+/* Hover Effect */
+.policy-btn:hover {
+    background: linear-gradient(180deg, #f8f8f8 0%, #e0e0e0 100%);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Active (Click) Effect */
+.policy-btn:active {
+    background: linear-gradient(180deg, #e0e0e0 0%, #cfcfcf 100%);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+    transform: translateY(1px);
+}

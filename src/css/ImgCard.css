@@ -1,0 +1,80 @@
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    flex-wrap: wrap;
+}
+
+.textContainer {
+    flex: 1;
+    padding: 10px;
+    text-align: left; /* Ensures text alignment to the left */
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: black;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: left; /* Explicitly align title text to the left */
+}
+
+.description {
+    font-size: 16px;
+    color: black;
+    text-align: left; /* Align description text to the left */
+}
+
+.image {
+    width: 200px;
+    height: auto;
+    margin-left: 20px;
+    border-radius: 10px;
+    animation: floatUpDown 2s ease-in-out infinite;
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .textContainer {
+        padding: 10px;
+    }
+
+    .title {
+        font-size: 20px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .image {
+        width: 80%;
+        max-width: 180px;
+        margin: 10px auto;
+    }
+}

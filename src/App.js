@@ -19,6 +19,7 @@ import ShareMediaTandC from "./policies-and-tc/sharemedia/tanc";
 import MemeMediaPP from "./policies-and-tc/mememedia/pp";
 import MemeMediaTandC from "./policies-and-tc/mememedia/tanc";
 import GoogleForm from "./pages/ContactUs";
+import Footer from "./components/Footer";
 
 
 function App() {
@@ -45,6 +46,7 @@ function App() {
         <Route path="/Contact/form" element={<GoogleForm/>}/>
       </Routes>
 
+      <Footer/>
       
     </Router>
   );

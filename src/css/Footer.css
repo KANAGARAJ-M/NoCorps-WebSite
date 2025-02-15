@@ -1,0 +1,57 @@
+/* Footer.css */
+
+/* Links */
+.hover-link {
+    color: rgb(255, 255, 255); /* Default text color */
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .hover-link:hover {
+    color: #FFD700; /* Gold color on hover */
+    transform: translateY(-3px);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Social Icons */
+  .hover-icon {
+    display: inline-block;
+    position: relative;
+    transition: transform 0.3s ease, background 0.3s ease;
+    padding: 10px;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+  
+  .hover-icon svg {
+    font-size: 26px;
+    color: white;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Glossy hover effect */
+  .hover-icon::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 10%, rgba(255, 255, 255, 0) 70%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .hover-icon:hover::before {
+    opacity: 1;
+  }
+  
+  .hover-icon:hover {
+    transform: scale(1.2);
+    background: linear-gradient(135deg, rgba(255, 215, 0, 0.6), rgba(255, 140, 0, 0.6));
+  }
+  
+  .hover-icon:hover svg {
+    color: black !important; /* Change icon color on hover */
+  }
+  

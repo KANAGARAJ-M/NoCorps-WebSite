@@ -6,7 +6,7 @@ const WebCookiePolicy = () => {
     <div className="privacy-container">
         <h1>Cookies Policy</h1>
 <p>Last updated: February 14, 2025</p>
-<p>This Cookies Policy explains what Cookies are and how We use them. You should read this policy so You can understand what type of cookies We use, or the information We collect using Cookies and how that information is used. This Cookies Policy has been created with the help of the <a href="https://www.freeprivacypolicy.com/free-cookies-policy-generator/" target="_blank">Free Cookies Policy Generator</a>.</p>
+<p>This Cookies Policy explains what Cookies are and how We use them. You should read this policy so You can understand what type of cookies We use, or the information We collect using Cookies and how that information is used. This Cookies Policy has been created with the help of the <a href="https://www.freeprivacypolicy.com/free-cookies-policy-generator/" rel="noreferrer" target="_blank">Free Cookies Policy Generator</a>.</p>
 <p>Cookies do not typically contain any information that personally identifies a user, but personal information that we store about You may be linked to the information stored in and obtained from Cookies. For further information on how We use, store and keep your personal data secure, see our Privacy Policy.</p>
 <p>We do not store sensitive personal information, such as mailing addresses, account passwords, etc. in the Cookies We use.</p>
 <h2>Interpretation and Definitions</h2>
@@ -17,7 +17,7 @@ const WebCookiePolicy = () => {
 <ul>
 <li><strong>Company</strong> (referred to as either &quot;the Company&quot;, &quot;We&quot;, &quot;Us&quot; or &quot;Our&quot; in this Cookies Policy) refers to NoCorps, Dharapuram,Tiruppur - 638702.</li>
 <li><strong>Cookies</strong> means small files that are placed on Your computer, mobile device or any other device by a website, containing details of your browsing history on that website among its many uses.</li>
-<li><strong>Website</strong> refers to NoCorps, accessible from <a href="nocorps.netlify.app" rel="external nofollow noopener" target="_blank">nocorps.netlify.app</a></li>
+<li><strong>Website</strong> refers to NoCorps, accessible from <a href="7rounds.xyz" rel="external nofollow noopener" target="_blank">7rounds.xyz</a></li>
 <li><strong>You</strong> means the individual accessing or using the Website, or a company, or any legal entity on behalf of which such individual is accessing or using the Website, as applicable.</li>
 </ul>
 <h2>The use of the Cookies</h2>
@@ -66,7 +66,7 @@ const WebCookiePolicy = () => {
 <p>By email: kanagaraj.developer@gmail.com</p>
 </li>
 <li>
-<p>By visiting this page on our website: <a href="nocorps.netlify.app" rel="external nofollow noopener" target="_blank">nocorps.netlify.app</a></p>
+<p>By visiting this page on our website: <a href="7rounds.xyz" rel="external nofollow noopener" target="_blank">7rounds.xyz</a></p>
 </li>
 </ul>
 

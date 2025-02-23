@@ -27,6 +27,7 @@ const Navbar = () => {
         <li><Link to="/products" onClick={closeMenu}>Products</Link></li>
         <li><Link to="/policies" onClick={closeMenu}>Policies</Link></li>
         <li><Link to="/Contact/form" onClick={closeMenu}>Contact Us</Link></li>
+        {/* <form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_Pz0O0XFOlkRlwp" async> </script> </form> */}
       </ul>
     </nav>
   );

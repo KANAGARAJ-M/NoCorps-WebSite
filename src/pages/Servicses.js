@@ -7,7 +7,7 @@ function Servicses() {
     return (
         <div>
             <ImgCard
-                img={Img}
+                imageUrl={Img}
                 alt={"NoCorps Logo"}
                 title={"What We Offer"}
                 description={"At NoCorps, we provide expert Flutter development, full-stack development, and web development services, creating high-performance applications for Android, iOS, Web, and Windows. Whether you're a startup or an enterprise, we build scalable, user-friendly, and secure digital solutions tailored to your needs."}

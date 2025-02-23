@@ -1,8 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaTelegram, FaInstagram, FaDiscord } from "react-icons/fa";
 // import "./Footer.css"; // Import the CSS file
 import "../css/Footer.css"
+// import RazorpayButton from "./Support";
 
 const Footer = () => {
     return (
@@ -23,28 +24,39 @@ const Footer = () => {
             <Link to="/web/NoCorps/t&c" className="hover-link">Terms & Conditions</Link>
             <Link to="/web/NoCorps/cookie-policy" className="hover-link">Cookie Policy</Link>
           </div>
+
+          <div>
+            <h3>Support</h3>
+            {/* <RazorpayButton/> */}
+          </div>
   
           <div style={styles.section}>
             <h3>Follow Us</h3>
             <div style={styles.socialIcons}>
-              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" className="hover-icon">
+              <a href="https://www.facebook.com/nocorpsdev/" target="_blank" rel="noopener noreferrer" className="hover-icon">
                 <FaFacebook />
               </a>
-              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover-icon">
+              <a href="https://x.com/nocorps_dev" target="_blank" rel="noopener noreferrer" className="hover-icon">
                 <FaTwitter />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover-icon">
-                <FaLinkedin />
+              <a href="https://discord.gg/5guaasUc" target="_blank" rel="noopener noreferrer" className="hover-icon">
+                <FaDiscord />
               </a>
-              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="hover-icon">
+              <a href="https://discord.gg/679h8epu" target="_blank" rel="noopener noreferrer" className="hover-icon">
+                <FaDiscord />
+              </a>
+              <a href="https://www.instagram.com/nocorps/" target="_blank" rel="noopener noreferrer" className="hover-icon">
                 <FaInstagram />
+              </a>
+              <a href="https://t.me/aiccoin_community" target="_blank" rel="noopener noreferrer" className="hover-icon">
+                <FaTelegram />
               </a>
             </div>
           </div>
         </div>
   
         <div style={styles.bottom}>
-          <p>&copy; {new Date().getFullYear()} NoCorps. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} NoCorps.org All rights reserved.</p>
         </div>
       </footer>
     );
@@ -79,7 +91,7 @@ const Footer = () => {
     bottom: {
       marginTop: "20px",
       fontSize: "24px",
-      opacity: "0.2",
+      opacity: "0.5",
     },
   };
   

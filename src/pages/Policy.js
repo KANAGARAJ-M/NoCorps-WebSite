@@ -4,6 +4,7 @@ import "../css/PolicyButtons.css"; // Import CSS for styling
 
 
 
+
 function Policy() {
     const navigate = useNavigate();
     return(

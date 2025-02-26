@@ -1,42 +1,56 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaFacebook, FaTwitter, FaTelegram, FaInstagram, FaDiscord } from "react-icons/fa";
-// import "./Footer.css"; // Import the CSS file
-import "../css/Footer.css"
-// import RazorpayButton from "./Support";
+import "../css/Footer.css";
 
 const Footer = () => {
     return (
       <footer style={styles.footer}>
         <div style={styles.container}>
-          <div style={styles.section}>
+          <div className="footer-section">
+            <h3>Contact Us</h3>
+            <h5>Email: <a href="mailto:kanagaraj.developer@gmail.com" className="hover-link">kanagaraj.developer@gmail.com</a></h5>
+            <h5>Phone: <a href="tel:+919500434845" className="hover-link">+91 95004 34845</a></h5>
+          </div>
+          <div className="footer-section">
             <h3>Company</h3>
+            <div className="footer-links-sub-column">
             <Link to="/about" className="hover-link">About Us</Link>
             <Link to="/services" className="hover-link">Services</Link>
+            </div>
+            <div className="footer-links-sub-column">
             <Link to="/products" className="hover-link">Products</Link>
             <Link to="/Contact/form" className="hover-link">Contact</Link>
+            </div>
           </div>
   
-          <div style={styles.section}>
+          <div className="footer-section">
             <h3>Legal</h3>
+            <div className="footer-links-sub-column">
             <Link to="/policies" className="hover-link">Policies</Link>
             <Link to="/web/NoCorps/privacy-policy" className="hover-link">Privacy Policy</Link>
+            </div>
+            <div  className="footer-links-sub-column">
             <Link to="/web/NoCorps/t&c" className="hover-link">Terms & Conditions</Link>
             <Link to="/web/NoCorps/cookie-policy" className="hover-link">Cookie Policy</Link>
+            </div>
           </div>
 
-          <div>
+          <div className="footer-section">
             <h3>Support</h3>
             {/* <RazorpayButton/> */}
           </div>
   
-          <div style={styles.section}>
+          <div className="footer-section">
             <h3>Follow Us</h3>
             <div style={styles.socialIcons}>
               <a href="https://www.facebook.com/nocorpsdev/" target="_blank" rel="noopener noreferrer" className="hover-icon">
                 <FaFacebook />
               </a>
               <a href="https://x.com/nocorps_dev" target="_blank" rel="noopener noreferrer" className="hover-icon">
+                <FaTwitter />
+              </a>
+              <a href="https://x.com/AIC_NC" target="_blank" rel="noopener noreferrer" className="hover-icon">
                 <FaTwitter />
               </a>
               <a href="https://discord.gg/5guaasUc" target="_blank" rel="noopener noreferrer" className="hover-icon">
@@ -74,15 +88,9 @@ const Footer = () => {
     container: {
       display: "flex",
       justifyContent: "space-between",
-      alignItems: "center",
+      alignItems: "flex-start",
       flexWrap: "wrap",
       padding: "0 50px",
-    },
-    section: {
-      display: "flex",
-      flexDirection: "column",
-      gap: "10px",
-      fontSize: "16px",
     },
     socialIcons: {
       display: "flex",
@@ -92,6 +100,9 @@ const Footer = () => {
       marginTop: "20px",
       fontSize: "24px",
       opacity: "0.5",
+    },
+    footerLinksSubColumn: {
+      marginBottom: "20px", // Adjust the value as needed
     },
   };
   

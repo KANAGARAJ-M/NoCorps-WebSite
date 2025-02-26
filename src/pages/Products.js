@@ -1,14 +1,22 @@
-import ImgCard from "../components/ImgCard";
-import Img from '../assets/10.png';
+import React from 'react';
+import CountdownCard from "../components/CountdownCard";
+import Img13 from '../assets/13.png';
+import Img14 from '../assets/14.png';
 
 function Productes() {
-    return(
-        <ImgCard
-    imageUrl={Img}
-    title={"It's comming....."}
-    alt={"AIC"}
-    description={"Get ready for collecting your bonus and rewards!. Just 5 Days to go."}
-    />
+    const currentHour = new Date().getHours();
+    const imageUrl = currentHour >= 18 || currentHour < 6 ? Img14 : Img13; // Change image at 6 PM to 6 AM
+
+    return (
+        <div>
+            <CountdownCard
+                imageUrl={imageUrl}
+                title={"Countdown to Reveal"}
+                alt={"AIC"}
+                description={"The button will be revealed when the countdown ends."}
+                externalLink={"https://aiccoin.nocorps.org/register?ref=REF5XVNMDJZCW"}
+            />
+        </div>
     );
 }
 

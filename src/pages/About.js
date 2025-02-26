@@ -2,6 +2,7 @@ import ImgCard from "../components/ImgCard";
 import Img from '../assets/NcLogo.png';
 import TextCard from "../components/TextCard";
 import NormalTextCard from "../components/NormalTextCard";
+import React from 'react';
 
 function Abouts() {
     return(

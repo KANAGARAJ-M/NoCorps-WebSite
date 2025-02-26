@@ -1,7 +1,7 @@
 import ImgCard from "../components/ImgCard";
 import Img from '../assets/NcLogo.png';
 import NormalTextCard from "../components/NormalTextCard";
-
+import React from 'react';
 
 function Servicses() {
     return (

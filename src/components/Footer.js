@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaFacebook, FaTwitter, FaTelegram, FaInstagram, FaDiscord } from "react-icons/fa";
+import { FaFacebook, FaTwitter, FaTelegram, FaInstagram, FaDiscord, FaYoutube } from "react-icons/fa";
 import "../css/Footer.css";
 
 const Footer = () => {
@@ -10,7 +10,7 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Contact Us</h3>
             <h5>Email: <a href="mailto:kanagaraj.developer@gmail.com" className="hover-link">kanagaraj.developer@gmail.com</a></h5>
-            <h5>Phone: <a href="tel:+919500434845" className="hover-link">+91 95004 34845</a></h5>
+            <h5>Phone: <a href="tel:+919500434845" className="hover-link">+91 9500x xxxxx</a></h5>
           </div>
           <div className="footer-section">
             <h3>Company</h3>
@@ -40,6 +40,9 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Follow Us</h3>
             <div style={styles.socialIcons}>
+            <a href="https://www.youtube.com/@AicNocorps" target="_blank" rel="noopener noreferrer" className="hover-icon">
+                <FaYoutube />
+              </a>
               <a href="https://www.facebook.com/nocorpsdev/" target="_blank" rel="noopener noreferrer" className="hover-icon">
                 <FaFacebook />
               </a>
@@ -76,7 +79,7 @@ const Footer = () => {
     footer: {
       background: "linear-gradient(135deg, #1a1a1a, #444)",
       color: "white",
-      padding: "40px 20px",
+      // padding: "40px 20px",
       textAlign: "center",
       boxShadow: "0px -4px 20px rgba(0, 0, 0, 0.7)",
       borderTop: "2px solid rgba(255, 255, 255, 0.3)",

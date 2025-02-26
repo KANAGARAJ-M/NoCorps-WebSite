@@ -11,7 +11,7 @@ function Abouts() {
                 imageUrl={Img}
                 title={"Who We Are"}
                 alt={"This is img"}
-                description={"At [Your Business Name], we are passionate about crafting high-quality digital solutions that empower businesses to grow. With expertise in Flutter development, full-stack development, and web development, we create seamless, scalable, and high-performance applications for Android, iOS, Web, and Windows."}
+                description={"At NoCorps, we are passionate about crafting high-quality digital solutions that empower businesses to grow. With expertise in Flutter development, full-stack development, and web development, we create seamless, scalable, and high-performance applications for Android, iOS, Web, and Windows."}
             />
             <ImgCard 
             imageUrl={Img}

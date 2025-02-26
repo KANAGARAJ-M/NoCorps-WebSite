@@ -14,25 +14,21 @@ const Footer = () => {
           </div>
           <div className="footer-section">
             <h3>Company</h3>
-            <div className="footer-links-sub-column">
-            <Link to="/about" className="hover-link">About Us</Link>
-            <Link to="/services" className="hover-link">Services</Link>
-            </div>
-            <div className="footer-links-sub-column">
-            <Link to="/products" className="hover-link">Products</Link>
-            <Link to="/Contact/form" className="hover-link">Contact</Link>
+            <div className="footer-links-container">
+              <Link to="/about" className="hover-link">About Us</Link>
+              <Link to="/services" className="hover-link">Services</Link>
+              <Link to="/products" className="hover-link">Products</Link>
+              <Link to="/Contact/form" className="hover-link">Contact</Link>
             </div>
           </div>
   
           <div className="footer-section">
             <h3>Legal</h3>
-            <div className="footer-links-sub-column">
-            <Link to="/policies" className="hover-link">Policies</Link>
-            <Link to="/web/NoCorps/privacy-policy" className="hover-link">Privacy Policy</Link>
-            </div>
-            <div  className="footer-links-sub-column">
-            <Link to="/web/NoCorps/t&c" className="hover-link">Terms & Conditions</Link>
-            <Link to="/web/NoCorps/cookie-policy" className="hover-link">Cookie Policy</Link>
+            <div className="footer-links-container">
+              <Link to="/policies" className="hover-link">Policies</Link>
+              <Link to="/web/NoCorps/privacy-policy" className="hover-link">Privacy Policy</Link>
+              <Link to="/web/NoCorps/t&c" className="hover-link">Terms & Conditions</Link>
+              <Link to="/web/NoCorps/cookie-policy" className="hover-link">Cookie Policy</Link>
             </div>
           </div>
 
@@ -80,30 +76,30 @@ const Footer = () => {
     footer: {
       background: "linear-gradient(135deg, #1a1a1a, #444)",
       color: "white",
-      padding: "40px 0",
+      padding: "40px 20px",
       textAlign: "center",
       boxShadow: "0px -4px 20px rgba(0, 0, 0, 0.7)",
       borderTop: "2px solid rgba(255, 255, 255, 0.3)",
     },
     container: {
       display: "flex",
-      justifyContent: "space-between",
+      justifyContent: "space-around",
       alignItems: "flex-start",
       flexWrap: "wrap",
-      padding: "0 50px",
+      maxWidth: "1200px",
+      margin: "0 auto",
     },
     socialIcons: {
       display: "flex",
       gap: "15px",
+      flexWrap: "wrap",
+      justifyContent: "center",
     },
     bottom: {
       marginTop: "20px",
-      fontSize: "24px",
+      fontSize: "clamp(14px, 4vw, 24px)",
       opacity: "0.5",
-    },
-    footerLinksSubColumn: {
-      marginBottom: "20px", // Adjust the value as needed
-    },
+    }
   };
   
   export default Footer;

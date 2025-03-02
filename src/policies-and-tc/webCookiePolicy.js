@@ -30,12 +30,16 @@ const WebCookiePolicy = () => {
           <p>Type: Session Cookies</p>
           <p>Administered by: Us</p>
           <p>Purpose: These Cookies are essential to provide You with services available through the Website and to enable You to use some of its features. They help to authenticate users and prevent fraudulent use of user accounts. Without these Cookies, the services that You have asked for cannot be provided, and We only use these Cookies to provide You with those services.</p>
+          <p>Type: Session Cookies</p>
+          <p>Purpose: Authentication and security</p>
         </li>
         <li>
           <p><strong>Functionality Cookies</strong></p>
           <p>Type: Persistent Cookies</p>
           <p>Administered by: Us</p>
           <p>Purpose: These Cookies allow us to remember choices You make when You use the Website, such as remembering your login details or language preference. The purpose of these Cookies is to provide You with a more personal experience and to avoid You having to re-enter your preferences every time You use the Website.</p>
+          <p>Type: Persistent Cookies</p>
+          <p>Purpose: Remember user preferences and settings</p>
         </li>
       </ul>
       <h4>Your Choices Regarding Cookies</h4>

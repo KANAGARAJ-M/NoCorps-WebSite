@@ -1,6 +1,17 @@
+.policy-page {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 40px 20px;
+}
+
 .policy-container {
     text-align: center;
-    padding: 30px 20px;
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 h2 {
@@ -11,23 +22,71 @@ h2 {
     font-weight: bold;
 }
 
+.policy-main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    margin-bottom: 50px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.policy-main-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: linear-gradient(45deg, #007bff, #00d2ff);
+    border-radius: 2px;
+}
+
+.policy-groups {
+    display: grid;
+    gap: 40px;
+}
+
+.policy-group {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.policy-group:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.policy-group-title {
+    font-size: 1.8rem;
+    color: #2c3e50;
+    margin-bottom: 25px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #e9ecef;
+    position: relative;
+}
+
 .button-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
 }
 
 .policy-btn {
-    padding: 12px 24px;
+    padding: 15px 25px;
     font-size: 1rem;
-    color: #333;
-    background: linear-gradient(180deg, #ffffff 0%, #f0f0f0 100%);
-    border: 1px solid #ddd;
-    border-radius: 8px;
+    color: white;
+    background: linear-gradient(45deg, #007bff, #00d2ff);
+    border: none;
+    border-radius: 12px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
     font-weight: 600;
     position: relative;
     overflow: hidden;
@@ -48,9 +107,9 @@ h2 {
 
 /* Hover Effect */
 .policy-btn:hover {
-    background: linear-gradient(180deg, #f8f8f8 0%, #e0e0e0 100%);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-    transform: translateY(-2px);
+    background: linear-gradient(45deg, #0056b3, #00a6cc);
+    box-shadow: 0 8px 20px rgba(0, 123, 255, 0.3);
+    transform: translateY(-3px);
 }
 
 /* Active (Click) Effect */
@@ -58,4 +117,41 @@ h2 {
     background: linear-gradient(180deg, #e0e0e0 0%, #cfcfcf 100%);
     box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
     transform: translateY(1px);
+}
+
+@media (max-width: 768px) {
+    .policy-container {
+        padding: 20px;
+    }
+
+    .policy-main-title {
+        font-size: 2rem;
+    }
+
+    .policy-group {
+        padding: 20px;
+    }
+
+    .policy-group-title {
+        font-size: 1.5rem;
+    }
+
+    .button-group {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .policy-page {
+        padding: 20px 10px;
+    }
+
+    .policy-main-title {
+        font-size: 1.8rem;
+    }
+
+    .policy-btn {
+        padding: 12px 20px;
+        font-size: 0.9rem;
+    }
 }

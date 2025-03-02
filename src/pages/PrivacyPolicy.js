@@ -1,9 +1,64 @@
 import React from "react";
-import "../css/PrivacyPolicy.css"; // Import CSS for styling
+import "../css/PrivacyPolicy.css";
+import { Helmet } from 'react-helmet';
 
 const PrivacyPolicy = () => {
   return (
     <div className="privacy-container">
+      <Helmet>
+        {/* Primary Meta Tags */}
+        <title>Privacy Policy - NoCorps</title>
+        <meta name="description" content="Read NoCorps's privacy policy to understand how we collect, use, and protect your personal information across our services and applications." />
+        <meta name="keywords" content="NoCorps privacy policy, data protection, personal information, user privacy, privacy terms, NoCorps data collection" />
+        <meta name="author" content="NoCorps Development Team" />
+
+        {/* Open Graph / Facebook */}
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://nocorps.org/privacy-policy" />
+        <meta property="og:title" content="Privacy Policy - NoCorps" />
+        <meta property="og:description" content="Learn how NoCorps protects your privacy and handles your personal information." />
+        <meta property="og:image" content="https://nocorps.org/og-image.jpg" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+
+        {/* Twitter Card */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@nocorps_dev" />
+        <meta name="twitter:title" content="Privacy Policy - NoCorps" />
+        <meta name="twitter:description" content="Learn how NoCorps protects your privacy and handles your personal information." />
+        <meta name="twitter:image" content="https://nocorps.org/NcLogo.png" />
+
+        {/* Additional SEO Tags */}
+        <meta name="robots" content="index, follow, max-image-preview:large" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="canonical" href="https://nocorps.org/privacy-policy" />
+
+        {/* Structured Data */}
+        <script type="application/ld+json">
+          {`
+            {
+              "@context": "https://schema.org",
+              "@type": "WebPage",
+              "name": "NoCorps Privacy Policy",
+              "description": "Privacy policy and data protection information for NoCorps services",
+              "publisher": {
+                "@type": "Organization",
+                "name": "NoCorps",
+                "url": "https://nocorps.org"
+              },
+              "lastReviewed": "2025-02-14",
+              "audience": {
+                "@type": "Audience",
+                "audienceType": "Public"
+              },
+              "mainContentOfPage": {
+                "@type": "WebPageElement",
+                "cssSelector": ".privacy-container"
+              }
+            }
+          `}
+        </script>
+      </Helmet>
       <h1>Privacy Policy</h1>
       <p>Last updated: February 14, 2025</p>
       <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.</p>

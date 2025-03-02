@@ -1,9 +1,20 @@
+# NoCorps Website Robots.txt
 # https://www.robotstxt.org/robotstxt.html
+
 User-agent: *
-
 Allow: /
+Allow: /sitemap.xml
+Allow: /images/
+Allow: /static/
 
-Sitemap: https://nocorps.netlify.app//sitemap.xml
+# Prevent crawling of admin or private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+Disallow: /*?*
 
+# Add sitemap location
+Sitemap: https://nocorps.netlify.app/sitemap.xml
 
-Disallow:
+# Crawl-delay directive (optional)
+Crawl-delay: 10

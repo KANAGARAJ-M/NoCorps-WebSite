@@ -6,10 +6,16 @@ import { createClient } from '@supabase/supabase-js';
 import { Helmet } from 'react-helmet';
 import styles from './Contact.module.css';
 
-// Initialize Supabase client
+// Update the Supabase client initialization with error checking
 const supabase = createClient(
-    process.env.REACT_APP_SUPABASE_URL,
-    process.env.REACT_APP_SUPABASE_ANON_KEY
+    process.env.REACT_APP_SUPABASE_URL || 'https://rbdztvpllskbzqxmmzpc.supabase.co',
+    process.env.REACT_APP_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJiZHp0dnBsbHNrYnpxeG1tenBjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA5MjY2NzksImV4cCI6MjA1NjUwMjY3OX0.XpmlVRQACGUnvkfSA_Kb2W96f7yFMSVhqX2mAiI2tG0',
+    {
+        auth: { persistSession: false },
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    }
 );
 
 // Enhanced validation schema
@@ -40,10 +46,15 @@ const ContactForm = () => {
 
     const onSubmit = async (data) => {
         setIsSubmitting(true);
-        setSubmitStatus({ type: '', message: '' }); // Clear previous status
+        setSubmitStatus({ type: '', message: '' });
 
         try {
-            const { error } = await supabase
+            // Validate Supabase configuration
+            if (!process.env.REACT_APP_SUPABASE_URL || !process.env.REACT_APP_SUPABASE_ANON_KEY) {
+                throw new Error('Missing Supabase configuration');
+            }
+
+            const { error, data: responseData } = await supabase
                 .from('contacts')
                 .insert([{
                     name: data.name.trim(),
@@ -52,24 +63,37 @@ const ContactForm = () => {
                     message: data.message.trim(),
                     status: 'new',
                     created_at: new Date().toISOString()
-                }]);
+                }])
+                .select();
 
-            if (error) throw error;
+            if (error) {
+                console.error('Supabase error:', error);
+                throw new Error(error.message || 'Failed to submit form');
+            }
 
             setSubmitStatus({
                 type: 'success',
                 message: 'Thank you for your message. We will get back to you soon!'
             });
             reset();
-            
-            // Optional: Scroll to top to show success message
             window.scrollTo({ top: 0, behavior: 'smooth' });
 
         } catch (error) {
-            console.error('Contact form error:', error);
+            console.error('Contact form error details:', {
+                message: error.message,
+                stack: error.stack
+            });
+            
+            let errorMessage = 'An error occurred. Please try again later.';
+            if (error.message.includes('Failed to fetch')) {
+                errorMessage = 'Network error. Please check your connection and try again.';
+            } else if (error.message.includes('Missing Supabase')) {
+                errorMessage = 'Server configuration error. Please contact support.';
+            }
+            
             setSubmitStatus({
                 type: 'error',
-                message: 'Something went wrong. Please try again later.'
+                message: errorMessage
             });
         } finally {
             setIsSubmitting(false);
@@ -84,84 +108,97 @@ const ContactForm = () => {
             </Helmet>
 
             <div className={styles.formWrapper}>
-                <h1>Contact Us</h1>
-                <p className={styles.subtitle}>
-                    Have a question or project in mind? We'd love to hear from you.
-                </p>
-
-                {submitStatus.message && (
-                    <div className={`${styles.alert} ${styles[submitStatus.type]}`}>
-                        {submitStatus.message}
+                <div className={styles.contactInfo}>
+                    <h2>Let's Connect</h2>
+                    <p>We're here to help with your development needs. Fill out the form and we'll get back to you soon.</p>
+                    <div className={styles.contactDetails}>
+                        <div className={styles.contactItem}>
+                            <p>Email: kanagaraj.developer@gmail.com</p>
+                            <p>Follow us on social media</p>
+                        </div>
                     </div>
-                )}
+                </div>
 
-                <form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
-                    <div className={styles.formGroup}>
-                        <label htmlFor="name">Name</label>
-                        <input
-                            type="text"
-                            id="name"
-                            {...register('name')}
-                            className={errors.name ? styles.error : ''}
-                        />
-                        {errors.name && (
-                            <span className={styles.errorMessage}>{errors.name.message}</span>
-                        )}
-                    </div>
+                <div className={styles.formSection}>
+                    <h1>Send Us a Message</h1>
+                    <p className={styles.subtitle}>
+                        Have a question or project in mind? We'd love to hear from you.
+                    </p>
 
-                    <div className={styles.formGroup}>
-                        <label htmlFor="email">Email</label>
-                        <input
-                            type="email"
-                            id="email"
-                            {...register('email')}
-                            className={errors.email ? styles.error : ''}
-                        />
-                        {errors.email && (
-                            <span className={styles.errorMessage}>{errors.email.message}</span>
-                        )}
-                    </div>
+                    {submitStatus.message && (
+                        <div className={`${styles.alert} ${styles[submitStatus.type]}`}>
+                            {submitStatus.message}
+                        </div>
+                    )}
 
-                    <div className={styles.formGroup}>
-                        <label htmlFor="subject">Subject</label>
-                        <input
-                            type="text"
-                            id="subject"
-                            {...register('subject')}
-                            className={errors.subject ? styles.error : ''}
-                        />
-                        {errors.subject && (
-                            <span className={styles.errorMessage}>{errors.subject.message}</span>
-                        )}
-                    </div>
+                    <form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
+                        <div className={styles.formGroup}>
+                            <label htmlFor="name">Name</label>
+                            <input
+                                type="text"
+                                id="name"
+                                {...register('name')}
+                                className={errors.name ? styles.error : ''}
+                            />
+                            {errors.name && (
+                                <span className={styles.errorMessage}>{errors.name.message}</span>
+                            )}
+                        </div>
 
-                    <div className={styles.formGroup}>
-                        <label htmlFor="message">Message</label>
-                        <textarea
-                            id="message"
-                            rows="5"
-                            {...register('message')}
-                            className={errors.message ? styles.error : ''}
-                        />
-                        {errors.message && (
-                            <span className={styles.errorMessage}>{errors.message.message}</span>
-                        )}
-                    </div>
+                        <div className={styles.formGroup}>
+                            <label htmlFor="email">Email</label>
+                            <input
+                                type="email"
+                                id="email"
+                                {...register('email')}
+                                className={errors.email ? styles.error : ''}
+                            />
+                            {errors.email && (
+                                <span className={styles.errorMessage}>{errors.email.message}</span>
+                            )}
+                        </div>
 
-                    <button 
-                        type="submit" 
-                        className={styles.submitButton}
-                        disabled={isSubmitting}
-                    >
-                        {isSubmitting ? (
-                            <span className={styles.loadingSpinner}>
-                                <span className={styles.spinnerText}>Sending...</span>
-                            </span>
-                        ) : (
-                            'Send Message'
-                        )}
-                    </button>
-                </form>
+                        <div className={styles.formGroup}>
+                            <label htmlFor="subject">Subject</label>
+                            <input
+                                type="text"
+                                id="subject"
+                                {...register('subject')}
+                                className={errors.subject ? styles.error : ''}
+                            />
+                            {errors.subject && (
+                                <span className={styles.errorMessage}>{errors.subject.message}</span>
+                            )}
+                        </div>
+
+                        <div className={styles.formGroup}>
+                            <label htmlFor="message">Message</label>
+                            <textarea
+                                id="message"
+                                rows="5"
+                                {...register('message')}
+                                className={errors.message ? styles.error : ''}
+                            />
+                            {errors.message && (
+                                <span className={styles.errorMessage}>{errors.message.message}</span>
+                            )}
+                        </div>
+
+                        <button 
+                            type="submit" 
+                            className={styles.submitButton}
+                            disabled={isSubmitting}
+                        >
+                            {isSubmitting ? (
+                                <span className={styles.loadingSpinner}>
+                                    <span className={styles.spinnerText}>Sending...</span>
+                                </span>
+                            ) : (
+                                'Send Message'
+                            )}
+                        </button>
+                    </form>
+                </div>
             </div>
         </div>
     );

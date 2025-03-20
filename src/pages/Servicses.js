@@ -274,7 +274,7 @@ function Services() {
                     <h2>Ready to Start Your Project?</h2>
                     <p>Let's discuss how we can help bring your ideas to life.</p>
                     <div className={styles.ctaButtons}>
-                        <Link to="/contact" className={styles.ctaButton}>Contact Us</Link>
+                        <Link to="/contact-form" className={styles.ctaButton}>Contact Us</Link>
                         <Link to="/portfolio" className={styles.ctaButtonOutline}>View Our Work</Link>
                     </div>
                 </section>

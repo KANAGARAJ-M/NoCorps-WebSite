@@ -184,7 +184,7 @@ function About() {
                 <section className={`${styles.ctaSection} ${styles.scrollAnimate}`}>
                     <h2>Ready to Transform Your Ideas?</h2>
                     <p>Let's create something amazing together</p>
-                    <Link to="/contact" className={styles.ctaButton}>
+                    <Link to="/contact-form" className={styles.ctaButton}>
                         Start Your Project
                     </Link>
                 </section>

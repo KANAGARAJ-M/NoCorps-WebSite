@@ -29,6 +29,7 @@ import FullStackServices from "./services/fullstack";
 import WebServices from "./services/web";
 import AicCoinProduct from "./pages/products/AicCoinProduct";
 import ContactForm from "./contact/contact";
+import RemoveAccountForm from "./contact/removeAccountForm";
 
 function App() {
   return (
@@ -95,7 +96,7 @@ function App() {
           <Route path="/products/vshare" element={<VShareProduct />} />
           <Route path="/products/chat-up" element={<ChatUpProduct />} /> */}
 
-          <Route path="/contact-form/" element={<ContactForm />} />
+          <Route path="/contact-form" element={<ContactForm />} />
           {/* Website Policies */}
           <Route path="/web/NoCorps/*">
             <Route path="privacy-policy" element={<PrivacyPolicy />} />
@@ -125,6 +126,9 @@ function App() {
 
           {/* Contact Route */}
           <Route path="/Contact/form" element={<GoogleForm />} />
+
+          {/* Remove Account Route */}
+          <Route path="/remove-account" element={<RemoveAccountForm />} />
 
           {/* 404 Route */}
           <Route path="*" element={<NotFound />} />

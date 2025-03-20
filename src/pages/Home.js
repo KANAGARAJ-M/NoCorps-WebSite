@@ -111,7 +111,7 @@ function Home() {
             <header className={`${styles.heroSection} ${styles.scrollAnimate}`}>
                 <h1>Expert Flutter & Full-Stack Development Services</h1>
                 <p>Transform your ideas into powerful digital solutions with our professional development team</p>
-                <Link to="/Contact/form" className={styles.primaryCta}>Get Started Today</Link>
+                <Link to="/contact-form" className={styles.primaryCta}>Get Started Today</Link>
             </header>
 
             <main>
@@ -274,7 +274,7 @@ function Home() {
                             <li>✓ Dedicated Support Team</li>
                         </ul>
                     </div>
-                    <Link to="/Contact/form" className={styles.ctaButton}>Schedule Free Consultation</Link>
+                    <Link to="/contact-form" className={styles.ctaButton}>Schedule Free Consultation</Link>
                 </section>
 
                 <section className={styles.faq}>
@@ -297,10 +297,10 @@ function Home() {
                     </div>
                 </section>
 
-                <section className={styles.technologies}>
-                    <h2>Technologies We Excel In</h2>
+                <section className={`${styles.technologies} ${styles.scrollAnimate}`}>
+                    <h2 className={styles.scrollAnimate}>Technologies We Excel In</h2>
                     <div className={styles.techGrid}>
-                        <article className={styles.techCard}>
+                        <article className={`${styles.techCard} ${styles.scrollAnimate} ${styles.delay1}`}>
                             <h3>Mobile Development</h3>
                             <ul>
                                 <li>Flutter & Dart</li>
@@ -310,7 +310,7 @@ function Home() {
                             </ul>
                         </article>
 
-                        <article className={styles.techCard}>
+                        <article className={`${styles.techCard} ${styles.scrollAnimate} ${styles.delay2}`}>
                             <h3>Frontend Technologies</h3>
                             <ul>
                                 <li>React.js & Next.js</li>
@@ -320,7 +320,7 @@ function Home() {
                             </ul>
                         </article>
 
-                        <article className={styles.techCard}>
+                        <article className={`${styles.techCard} ${styles.scrollAnimate} ${styles.delay3}`}>
                             <h3>Backend Technologies</h3>
                             <ul>
                                 <li>Node.js & Express</li>

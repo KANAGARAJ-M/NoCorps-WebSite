@@ -105,13 +105,13 @@ body {
 
   .nav-links {
     position: fixed;
-    top: 70px;
+    top: 60px; /* Reduced from 70px */
     right: -100%;
     flex-direction: column;
     background: white;
-    width: 80%;
-    height: calc(100vh - 70px);
-    padding: 2rem;
+    width: 70%; /* Changed from 80% */
+    height: calc(100vh - 60px); /* Adjusted for new top value */
+    padding: 1.5rem;
     gap: 1.5rem;
     transition: right 0.3s ease;
     box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
@@ -122,18 +122,24 @@ body {
   }
 
   .nav-links li {
-    padding: 10px 0;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
   }
 
   .nav-links a {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     display: block;
     width: 100%;
+    padding: 0.5rem 0;
   }
 
   /* Menu Toggle Animations */
   .menu-toggle.open .bar:nth-child(1) {
-    transform: rotate(45deg) translate(8px, 8px);
+    transform: rotate(45deg) translate(6px, 6px);
   }
 
   .menu-toggle.open .bar:nth-child(2) {
@@ -141,21 +147,47 @@ body {
   }
 
   .menu-toggle.open .bar:nth-child(3) {
-    transform: rotate(-45deg) translate(7px, -7px);
+    transform: rotate(-45deg) translate(6px, -6px);
   }
 }
 
 @media (max-width: 480px) {
+  body {
+    padding-top: 60px; /* Adjusted for smaller header */
+  }
+
   .navbar {
-    padding: 1rem 20px;
+    padding: 0.8rem 15px;
+    height: 60px;
+  }
+
+  .navbar.scrolled {
+    padding: 0.8rem 15px;
   }
 
   .logo {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+  }
+
+  .menu-toggle {
+    gap: 5px;
+  }
+
+  .bar {
+    width: 22px;
+    height: 2px;
   }
 
   .nav-links {
-    width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
+    top: 60px;
+  }
+
+  .nav-links li {
+    padding: 10px 0;
+  }
+
+  .nav-links a {
+    font-size: 1rem;
   }
 }

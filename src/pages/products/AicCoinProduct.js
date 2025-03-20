@@ -79,7 +79,7 @@ function AicCoinProduct() {
                             <FaCoins className={styles.buttonIcon} />
                             Download Now
                         </a>
-                        <Link to="/Contact/form" className={styles.contactButton}>
+                        <Link to="/contact-form" className={styles.contactButton}>
                             Get Support
                         </Link>
                     </div>

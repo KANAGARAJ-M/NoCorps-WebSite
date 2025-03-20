@@ -46,7 +46,7 @@ const Navbar = () => {
           { path: "/services", label: "Services" },
           { path: "/products", label: "Products" },
           { path: "/policies", label: "Policies" },
-          { path: "/Contact/form", label: "Contact Us" }
+          { path: "/contact-form", label: "Contact Us" }
         ].map(({ path, label }) => (
           <li key={path}>
             <Link 

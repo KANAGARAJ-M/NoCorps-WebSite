@@ -9,6 +9,7 @@ export const CSP_CONFIG = {
         'font-src': ["'self'", "data:"]
     }
 };
+// Removed invalid line as it is not valid JavaScript syntax
 
 export const CSP_HEADERS = {
     'Content-Security-Policy': [

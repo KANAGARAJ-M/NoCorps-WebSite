@@ -8,8 +8,8 @@ import styles from './Contact.module.css';
 
 // Update the Supabase client initialization with error checking
 const supabase = createClient(
-    process.env.REACT_APP_SUPABASE_URL || 'https://rbdztvpllskbzqxmmzpc.supabase.co',
-    process.env.REACT_APP_SUPABASE_ANON_KEY || 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InJiZHp0dnBsbHNrYnpxeG1tenBjIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NDA5MjY2NzksImV4cCI6MjA1NjUwMjY3OX0.XpmlVRQACGUnvkfSA_Kb2W96f7yFMSVhqX2mAiI2tG0',
+    process.env.REACT_APP_SUPABASE_URL,
+    process.env.REACT_APP_SUPABASE_ANON_KEY,
     {
         auth: { persistSession: false },
         headers: {
@@ -51,7 +51,8 @@ const ContactForm = () => {
         try {
             // Validate Supabase configuration
             if (!process.env.REACT_APP_SUPABASE_URL || !process.env.REACT_APP_SUPABASE_ANON_KEY) {
-                throw new Error('Missing Supabase configuration');
+                console.error('Missing Supabase environment variables');
+                throw new Error('Server configuration error');
             }
 
             const { error, data: responseData } = await supabase

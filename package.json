@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@hookform/resolvers": "^4.1.2",
+    "@rollup/plugin-terser": "^0.4.4",
     "@supabase/supabase-js": "^2.49.1",
     "aiccoin": "file:",
     "cra-template": "1.2.0",
@@ -16,6 +17,7 @@
     "react-router-dom": "^6.29.0",
     "react-scripts": "^5.0.1",
     "sitemap": "^8.0.0",
+    "source-map-js": "^1.2.1",
     "styled-components": "^6.1.15",
     "webpack": "^5.98.0",
     "webpack-cli": "^6.0.1",

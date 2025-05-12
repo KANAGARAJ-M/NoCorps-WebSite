@@ -5,11 +5,10 @@ export const CSP_CONFIG = {
         'script-src': ["'self'", "'unsafe-inline'", "'unsafe-eval'"],
         'style-src': ["'self'", "'unsafe-inline'"],
         'img-src': ["'self'", "data:", "https:"],
-        'frame-src': ["'self'"],
+        'frame-src': ["'self'", "https://docs.google.com"],
         'font-src': ["'self'", "data:"]
     }
 };
-// Removed invalid line as it is not valid JavaScript syntax
 
 export const CSP_HEADERS = {
     'Content-Security-Policy': [
@@ -18,7 +17,7 @@ export const CSP_HEADERS = {
         "script-src 'self' 'unsafe-inline' 'unsafe-eval'",
         "style-src 'self' 'unsafe-inline'",
         "img-src 'self' data: https:",
-        "frame-src 'self'",
+        "frame-src 'self' https://docs.google.com",
         "font-src 'self' data:"
     ].join('; ')
 };

@@ -84,7 +84,8 @@ const ContactUs = () => {
           <div className={styles.formSection}>
             <iframe
               className={styles.embeddedForm}
-              src="https://docs.google.com/forms/d/e/1FAIpQLSc4PTLe7A6V0yOKv1mndFIF1MEkjMuDTIcBXyqN513R2nuWUg/viewform?embedded=true"
+              
+              src="https://docs.google.com/forms/d/e/1FAIpQLSeVLi6yvX-6d4cK1w-kOpKGLsawTJd7UBuMBUSN54Kkv-X7bw/viewform?embedded=true"
               width="100%"
               height="800px"
               frameBorder="0"

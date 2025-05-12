@@ -335,6 +335,364 @@
     opacity: 0.8;
 }
 
+.pricingSection {
+    padding: 80px 0;
+}
+
+.pricingGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.pricingCard {
+    background: white;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    position: relative;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    height: auto;
+    min-height: 450px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricingCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+}
+
+.popularPricing {
+    border: 2px solid #007bff;
+}
+
+.popularBadge {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #007bff;
+    color: white;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+.pricingCard h3 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+.pricingAmount {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.pricingPeriod {
+    color: #6c757d;
+    margin-bottom: 20px;
+}
+
+.pricingFeatures {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    flex: 1;
+    overflow-y: auto;
+    padding: 0 5px;
+}
+
+.pricingFeatures li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.pricingFeatures li:last-child {
+    border-bottom: none;
+}
+
+.pricingButton, .pricingButtonOutline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 30px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: auto;
+    width: 100%;
+    cursor: pointer;
+    text-decoration: none;
+    align-self: center;
+}
+
+.pricingButton {
+    background: linear-gradient(45deg, #007bff, #00d2ff);
+    color: white;
+    border: none;
+}
+
+.pricingButton:hover {
+    background: linear-gradient(45deg, #0056b3, #00a6cc);
+    transform: translateY(-3px);
+}
+
+.pricingButtonOutline {
+    background: transparent;
+    color: #007bff;
+    border: 2px solid #007bff;
+}
+
+.useCasesSection {
+    padding: 60px 0;
+    background: #f8f9fa;
+    border-radius: 16px;
+    margin: 40px 0;
+}
+
+.useCasesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.useCaseCard {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.useCaseCard h3 {
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+/* Products list styles */
+.productsListSection {
+    padding: 60px 0;
+    margin-bottom: 40px;
+}
+
+.productsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.productListCard {
+    background: white;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    position: relative;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.productListCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.productIcon {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #007bff;
+    background: rgba(0, 123, 255, 0.1);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productBadge {
+    position: absolute;
+    top: -10px;
+    right: 20px;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: white;
+}
+
+.featured {
+    background: linear-gradient(45deg, #007bff, #00d2ff);
+}
+
+.popular {
+    background: linear-gradient(45deg, #ff6b6b, #ff8e53);
+}
+
+.viewDetailsButton {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    border: none;
+    color: #007bff;
+    font-weight: 600;
+    padding: 10px;
+    margin-top: auto;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.viewDetailsButton:hover {
+    color: #0056b3;
+    gap: 12px;
+}
+
+.backButton {
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    padding: 8px 16px;
+    border-radius: 30px;
+    color: white;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    align-self: flex-start;
+}
+
+.backButton:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Enhanced UI Styles */
+.heroContentWrapper {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.heroImageContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.heroImage {
+    width: 100%;
+    height: 320px;
+    /* background: url('https://source.unsplash.com/random/600x400/?pdf-document') center/cover no-repeat; */
+    border-radius: 16px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.heroImage::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0,123,255,0.2) 0%, rgba(0,210,255,0.2) 100%);
+    border-radius: 16px;
+}
+
+.backButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.backArrow {
+    transition: transform 0.3s ease;
+}
+
+.backButton:hover .backArrow {
+    transform: translateX(-4px);
+}
+
+.sectionHeader {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.sectionDivider {
+    width: 80px;
+    height: 4px;
+    background: linear-gradient(45deg, #007bff, #00d2ff);
+    margin: 10px auto 0;
+    border-radius: 2px;
+}
+
+.featureIconWrapper {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto 20px;
+    background: rgba(0, 123, 255, 0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featureIcon {
+    font-size: 2rem;
+    color: #007bff;
+}
+
+.useCaseIcon {
+    font-size: 2.5rem;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.ctaButton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 16px 35px;
+    transition: all 0.3s ease;
+}
+
+.ctaArrow {
+    transition: transform 0.3s ease;
+}
+
+.ctaButton:hover .ctaArrow {
+    transform: translateX(5px);
+}
+
+.freeButton {
+    background: linear-gradient(45deg, #6c757d, #495057);
+}
+
+.freeButton:hover {
+    background: linear-gradient(45deg, #5a6268, #343a40);
+}
+
+.buttonIcon {
+    margin-right: 8px;
+}
+
+/* Mobile Optimizations */
 @media (max-width: 968px) {
     .featuredProject {
         grid-template-columns: 1fr;
@@ -380,6 +738,52 @@
     .heroStats {
         grid-template-columns: 1fr;
         gap: 20px;
+    }
+
+    .pricingGrid {
+        grid-template-columns: 1fr;
+    }
+    
+    .popularPricing {
+        transform: translateY(0);
+    }
+
+    .pricingCard {
+        max-width: 350px;
+        margin: 0 auto;
+        min-height: auto;
+    }
+
+    .productsGrid {
+        grid-template-columns: 1fr;
+    }
+
+    .productIcon {
+        width: 70px;
+        height: 70px;
+        font-size: 2.5rem;
+    }
+    
+    .backButton {
+        margin-bottom: 25px;
+    }
+
+    .heroContentWrapper {
+        grid-template-columns: 1fr;
+    }
+
+    .heroImage {
+        height: 200px;
+        margin-top: 20px;
+    }
+
+    .featureIconWrapper {
+        width: 60px;
+        height: 60px;
+    }
+
+    .featureIcon {
+        font-size: 1.5rem;
     }
 }
 

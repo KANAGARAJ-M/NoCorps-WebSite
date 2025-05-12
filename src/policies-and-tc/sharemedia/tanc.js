@@ -4,8 +4,9 @@ import "../../css/PrivacyPolicy.css"; // Import CSS for styling
 const ShareMediaTandC = () => {
   return (
     <div className="privacy-container">
-      <h2>Terms and Conditions</h2>
-      <p>Last updated: February 14, 2025</p>
+      <h1>Terms and Conditions</h1>
+      <h2>Wavora</h2>
+      <p>Last updated: March 25, 2025</p>
       <p>Please read these terms and conditions carefully before using Our Service.</p>
       <h2>Interpretation and Definitions</h2>
       <h3>Interpretation</h3>
@@ -14,7 +15,7 @@ const ShareMediaTandC = () => {
       <p>For the purposes of these Terms and Conditions:</p>
       <ul>
         <li>
-          <p><strong>Application</strong> means the software program provided by the Company downloaded by You on any electronic device, named Share Media</p>
+          <p><strong>Application</strong> means the software program provided by the Company downloaded by You on any electronic device, named Wavora</p>
         </li>
         <li>
           <p><strong>Application Store</strong> means the digital distribution service operated and developed by Apple Inc. (Apple App Store) or Google Inc. (Google Play Store) in which the Application has been downloaded.</p>

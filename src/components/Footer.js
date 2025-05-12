@@ -17,11 +17,11 @@ const Footer = () => {
     { icon: FaYoutube, url: "https://www.youtube.com/@AicNocorps", label: "YouTube" },
     { icon: FaFacebook, url: "https://www.facebook.com/nocorpsdev/", label: "Facebook" },
     { icon: FaTwitter, url: "https://x.com/nocorps_dev", label: "Twitter NoCorps" },
-    { icon: FaTwitter, url: "https://x.com/AIC_NC", label: "Twitter AIC" },
-    { icon: FaDiscord, url: "https://discord.gg/5guaasUc", label: "Discord 1" },
-    { icon: FaDiscord, url: "https://discord.gg/679h8epu", label: "Discord 2" },
+    // { icon: FaTwitter, url: "https://x.com/AIC_NC", label: "Twitter AIC" },
+    // { icon: FaDiscord, url: "https://discord.gg/5guaasUc", label: "Discord 1" },
+    // { icon: FaDiscord, url: "https://discord.gg/679h8epu", label: "Discord 2" },
     { icon: FaInstagram, url: "https://www.instagram.com/nocorps/", label: "Instagram" },
-    { icon: FaTelegram, url: "https://t.me/aiccoin_community", label: "Telegram" }
+    // { icon: FaTelegram, url: "https://t.me/aiccoin_community", label: "Telegram" }
   ];
 
   return (
@@ -56,6 +56,15 @@ const Footer = () => {
             <Link to="/web/NoCorps/privacy-policy">Privacy Policy</Link>
             <Link to="/web/NoCorps/t&c">Terms & Conditions</Link>
             <Link to="/web/NoCorps/cookie-policy">Cookie Policy</Link>
+          </div>
+        </div>
+
+        <div className="footer-section">
+          <h3>Serviceses</h3>
+          <div className="footer-links">
+            {/* <Link to="https://pdftools.nocorps.org/">PDF Tools</Link> */}
+            <a href="https://pdftools.nocorps.org/" target="_blank" rel="noopener noreferrer">PDF Tools</a>
+            
           </div>
         </div>
 

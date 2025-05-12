@@ -203,14 +203,14 @@ function Home() {
                         </article>
 
                         <article className={`${styles.projectCard} ${styles.scrollAnimate} ${styles.animateRight}`}>
-                            <h3>ShareMedia Solution</h3>
+                            <h3>Wavora Solution</h3>
                             <p>Advanced social media management platform for content creators and businesses.</p>
                             <ul>
                                 <li>Content scheduling</li>
                                 <li>Analytics dashboard</li>
                                 <li>Multi-platform support</li>
                             </ul>
-                            {/* <Link to="/products/share-media" className={styles.projectLink}>Explore ShareMedia →</Link> */}
+                            {/* <Link to="/products/share-media" className={styles.projectLink}>Explore Wavora →</Link> */}
                         </article>
                     </div>
                 </section>
@@ -244,7 +244,7 @@ function Home() {
                     </div>
                 </section>
 
-                <section className={styles.testimonials}>
+                {/* <section className={styles.testimonials}>
                     <h2>Client Success Stories</h2>
                     <div className={styles.testimonialsGrid}>
                         <blockquote className={styles.testimonialCard}>
@@ -261,7 +261,7 @@ function Home() {
                             </footer>
                         </blockquote>
                     </div>
-                </section>
+                </section> */}
 
                 <section className={styles.ctaSection}>
                     <h2>Start Your Development Project</h2>
@@ -332,31 +332,22 @@ function Home() {
                     </div>
                 </section>
 
-                <section className={styles.industries}>
-                    <h2>Industries We Serve</h2>
+                <section className={`${styles.industries} ${styles.scrollAnimate}`}>
+                    <h2 className={styles.scrollAnimate}>Industries We Serve</h2>
                     <div className={styles.industryGrid}>
-                        <article className={styles.industryCard}>
+                        <article className={`${styles.industryCard} ${styles.scrollAnimate} ${styles.delay1}`}>
                             <h3>Fintech</h3>
                             <p>Secure payment solutions and financial management applications</p>
-                            {/* <Link to="/industries/fintech" className={styles.industryLink}>
-                                Explore Fintech Solutions →
-                            </Link> */}
                         </article>
 
-                        <article className={styles.industryCard}>
+                        <article className={`${styles.industryCard} ${styles.scrollAnimate} ${styles.delay2}`}>
                             <h3>Healthcare</h3>
                             <p>HIPAA-compliant medical software and healthcare management systems</p>
-                            {/* <Link to="/industries/healthcare" className={styles.industryLink}>
-                                View Healthcare Solutions →
-                            </Link> */}
                         </article>
 
-                        <article className={styles.industryCard}>
+                        <article className={`${styles.industryCard} ${styles.scrollAnimate} ${styles.delay3}`}>
                             <h3>E-commerce</h3>
                             <p>Scalable online shopping platforms and inventory management systems</p>
-                            {/* <Link to="/industries/ecommerce" className={styles.industryLink}>
-                                Discover E-commerce Solutions →
-                            </Link> */}
                         </article>
                     </div>
                 </section>
@@ -368,8 +359,9 @@ function Home() {
                 <address>
                     <p>Email: <a href="mailto:kanagaraj.developer@gmail.com">kanagaraj.developer@gmail.com</a></p>
                     <p>Follow us on: 
-                        <a href="https://twitter.com/nocorps_dev" className={styles.socialLink}>Twitter</a> | 
-                        <a href="https://github.com/nocorps" className={styles.socialLink}>GitHub</a>
+                        <a href="https://twitter.com/nocorps_dev" className={styles.socialLink}>Twitter</a>
+                         {/* |  */}
+                        {/* <a href="https://github.com/nocorps" className={styles.socialLink}>GitHub</a> */}
                     </p>
                 </address>
             </aside>

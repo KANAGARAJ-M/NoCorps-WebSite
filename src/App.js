@@ -16,6 +16,7 @@ import ChatUpPP from "./policies-and-tc/chatup/pp";
 import ChatUpTandC from "./policies-and-tc/chatup/tanc";
 import ShareMediaPP from "./policies-and-tc/sharemedia/pp";
 import ShareMediaTandC from "./policies-and-tc/sharemedia/tanc";
+// import wavoraChildSafety from "./policies-and-tc/sharemedia/ChildSafety";
 import MemeMediaPP from "./policies-and-tc/mememedia/pp";
 import MemeMediaTandC from "./policies-and-tc/mememedia/tanc";
 import GoogleForm from "./pages/ContactUs";
@@ -30,6 +31,12 @@ import WebServices from "./services/web";
 import AicCoinProduct from "./pages/products/AicCoinProduct";
 import ContactForm from "./contact/contact";
 import RemoveAccountForm from "./contact/removeAccountForm";
+// import wavoracsae from "./policies-and-tc/sharemedia/ChildSafety";
+import WavoraCSAE from "./policies-and-tc/sharemedia/ChildSafety";
+import DudePP from "./policies-and-tc/dude/pp";
+import DudeTanc from "./policies-and-tc/dude/tanc";
+import ProductsCPY from "./pages/products/Products";
+// import wavoraChildSafety from "./policies-and-tc/sharemedia/ChildSafety";
 
 function App() {
   return (
@@ -114,16 +121,24 @@ function App() {
               <Route path="Privacy-Policy" element={<ChatUpPP />} />
               <Route path="Terms-and-Condition" element={<ChatUpTandC />} />
             </Route>
-            <Route path="Share-Media/*">
+            <Route path="Wavora/*">
               <Route path="Privacy-Policy" element={<ShareMediaPP />} />
               <Route path="Terms-and-Condition" element={<ShareMediaTandC />} />
+              
             </Route>
             <Route path="Meme-Media/*">
               <Route path="Privacy-Policy" element={<MemeMediaPP />} />
               <Route path="Terms-and-Condition" element={<MemeMediaTandC />} />
+              
             </Route>
           </Route>
 
+          <Route path="/android/app/Wavora/Child-Safety-Standards-policy" element={<WavoraCSAE/>} />
+          <Route path="/android/app/Dude/Privacy-Policy" element={<DudePP/>} />
+
+          <Route path="/android/app/Dude/Terms-and-Condition" element={<DudeTanc/>} />
+
+          <Route path="/cpy" element={<ProductsCPY/>} />
           {/* Contact Route */}
           <Route path="/Contact/form" element={<GoogleForm />} />
 

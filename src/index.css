@@ -5,10 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 20px;
+  padding: clamp(10px, 4vw, 20px); /* Responsive padding */
+  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Ensure proper rendering on small mobile devices */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  /* Force visibility for animation elements that might be missed by IntersectionObserver */
+  .scrollAnimate {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
 }

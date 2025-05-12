@@ -11,7 +11,7 @@ import {
     FaArrowRight
 } from 'react-icons/fa';
 
-import styles from '../css/Products.module.css';
+import styles from '../../css/Products.module.css';
 
 function Products() {
     const observerRef = useRef(null);

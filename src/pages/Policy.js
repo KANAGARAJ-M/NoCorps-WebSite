@@ -23,10 +23,11 @@ function Policy() {
             ]
         },
         {
-            name: "ShareMedia",
+            name: "Wavora",
             policies: [
-                { title: "Privacy Policy", path: "/android/app/Share-Media/Privacy-Policy" },
-                { title: "Terms & Conditions", path: "/android/app/Share-Media/Terms-and-Condition" }
+                { title: "Privacy Policy", path: "/android/app/Wavora/Privacy-Policy" },
+                { title: "Terms & Conditions", path: "/android/app/Wavora/Terms-and-Condition" },
+                { title: "Child Safety Standards", path: "/android/app/Wavora/Child-Safety-Standards-policy" }
             ]
         },
         {
@@ -34,6 +35,13 @@ function Policy() {
             policies: [
                 { title: "Privacy Policy", path: "/android/app/Meme-Media/Privacy-Policy" },
                 { title: "Terms & Conditions", path: "/android/app/Meme-Media/Terms-and-Condition" }
+            ]
+        },
+        {
+            name: "DuDe App Find you Friends",
+            policies: [
+                { title: "Privacy Policy", path: "/android/app/Dude/Privacy-Policy" },
+                { title: "Terms & Conditions", path: "/android/app/Dude/Terms-and-Condition" }
             ]
         },
         {

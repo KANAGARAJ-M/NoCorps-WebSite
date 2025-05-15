@@ -33,7 +33,7 @@ const links = [
 ];
 
 async function generateSitemap() {
-  const sitemapStream = new SitemapStream({ hostname: "https://nocorps.netlify.app" });
+  const sitemapStream = new SitemapStream({ hostname: "https://nocorps.org" });
 
   for (const link of links) {
     sitemapStream.write(link);

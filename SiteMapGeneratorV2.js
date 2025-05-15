@@ -3,10 +3,15 @@ const fs = require("fs");
 
 const links = [
   { url: "/", changefreq: "daily", priority: 1.0 },
-  { url: "/about", changefreq: "weekly", priority: 0.8 },
-  { url: "/services", changefreq: "weekly", priority: 0.8 },
-  { url: "/products", changefreq: "weekly", priority: 0.8 },
-  { url: "/policies", changefreq: "monthly", priority: 0.6 },
+  { url: "/about", changefreq: "daily", priority: 1.0 },
+  { url: "/services", changefreq: "daily", priority: 1.0 },
+  { url: "/products", changefreq: "daily", priority: 1.0 },
+  { url: "/policies", changefreq: "daily", priority: 1.0 },
+  { url: "/services/mobile-development", changefreq: "daily", priority: 1.0 },
+  { url: "/services/web-development", changefreq: "daily", priority: 1.0 },
+  { url: "/services/full-stack-development", changefreq: "daily", priority: 1.0 },
+  { url: "/products/aic-coin", changefreq: "daily", priority: 1.0 },
+  { url: "/contact-form", changefreq: "daily", priority: 1.0 },
   { url: "/web/NoCorps/privacy-policy", changefreq: "monthly", priority: 0.6 },
   { url: "/web/NoCorps/t&c", changefreq: "monthly", priority: 0.6 },
   { url: "/web/NoCorps/cookie-policy", changefreq: "monthly", priority: 0.6 },
@@ -18,7 +23,13 @@ const links = [
   { url: "/android/app/Wavora/Terms-and-Condition", changefreq: "monthly", priority: 0.5 },
   { url: "/android/app/Meme-Media/Privacy-Policy", changefreq: "monthly", priority: 0.5 },
   { url: "/android/app/Meme-Media/Terms-and-Condition", changefreq: "monthly", priority: 0.5 },
-  { url: "/Contact/form", changefreq: "monthly", priority: 0.5 },
+  { url: "/android/app/Wavora/Child-Safety-Standards-policy", changefreq: "daily", priority: 1.0 },
+  { url: "/android/app/Dude/Privacy-Policy", changefreq: "daily", priority: 1.0 },
+  { url: "/android/app/Dude/Terms-and-Condition", changefreq: "daily", priority: 1.0 },
+  { url: "/Contact/form", changefreq: "daily", priority: 1.0 },
+  { url: "/cpy", changefreq: "daily", priority: 1.0 },
+  { url: "/remove-account", changefreq: "daily", priority: 1.0 },
+  { url: "*", changefreq: "daily", priority: 1.0 },  
 ];
 
 async function generateSitemap() {

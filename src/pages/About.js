@@ -92,7 +92,7 @@ function About() {
 
             <header className={`${styles.heroSection} ${styles.scrollAnimate}`}>
                 <h1>About NoCorps</h1>
-                <p>Transforming Ideas into Digital Reality Since 2020</p>
+                <p>Transforming Ideas into Digital Reality Since 2024</p>
             </header>
 
             <main>

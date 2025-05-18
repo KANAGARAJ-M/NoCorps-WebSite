@@ -90,6 +90,7 @@ function App() {
           <Route path="/about" element={<Abouts />} />
           <Route path="/services" element={<Servicses />} />
           <Route path="/products" element={<Productes />} />
+          <Route path="/products/:productId" element={<Productes />} />
           <Route path="/policies" element={<Policy />} />
           
           {/* Service Routes */}

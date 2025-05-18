@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import { Link, useParams, useNavigate } from 'react-router-dom';
 import { 
     FaFilePdf, 
     FaDownload, 
@@ -14,6 +14,8 @@ import {
 import styles from '../css/Products.module.css';
 
 function Products() {
+    const { productId } = useParams(); // Get product ID from URL
+    const navigate = useNavigate();    // For navigation
     const observerRef = useRef(null);
     const [selectedProduct, setSelectedProduct] = useState(null);
     
@@ -73,9 +75,14 @@ function Products() {
     ];
 
     const handleProductSelect = (productId) => {
-        setSelectedProduct(productId);
-        // Scroll to top when product is selected
+        // Update URL instead of just setting state
+        navigate(`/products/${productId}`);
+        // Scroll to top
         window.scrollTo(0, 0);
+    };
+    
+    const handleBackButton = () => {
+        navigate('/products');
     };
 
     const renderProductsList = () => (
@@ -124,7 +131,7 @@ function Products() {
                     <div className={styles.heroContent}>
                         <button 
                             className={styles.backButton} 
-                            onClick={() => setSelectedProduct(null)}
+                            onClick={handleBackButton}
                         >
                             <span className={styles.backArrow}>←</span> Back to Products
                         </button>
@@ -482,9 +489,13 @@ function Products() {
     //     </>
     // );
 
-    // Render content based on selected product
+    // Render content based on URL parameter
     const renderProductContent = () => {
-        switch (selectedProduct) {
+        if (!productId) {
+            return renderProductsList();
+        }
+        
+        switch (productId) {
             case 'pdf-tools':
                 return renderPdfToolsDetails();
             // case 'aic-coin':

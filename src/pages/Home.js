@@ -353,18 +353,18 @@ function Home() {
                 </section>
             </main>
 
-            <aside className={styles.contactInfo}>
+            {/* <aside className={styles.contactInfo}>
                 <h2>Ready to Start Your Project?</h2>
                 <p>Contact us today for a free consultation and project estimate.</p>
                 <address>
                     <p>Email: <a href="mailto:kanagaraj.developer@gmail.com">kanagaraj.developer@gmail.com</a></p>
                     <p>Follow us on: 
                         <a href="https://twitter.com/nocorps_dev" className={styles.socialLink}>Twitter</a>
-                         {/* |  */}
-                        {/* <a href="https://github.com/nocorps" className={styles.socialLink}>GitHub</a> */}
+                        
+                        <a href="https://github.com/nocorps" className={styles.socialLink}>GitHub</a>
                     </p>
                 </address>
-            </aside>
+            </aside> */}
         </div>
     );
 }

@@ -14,7 +14,7 @@ import "../css/Footer.css";
 
 const Footer = () => {
   const socialLinks = [
-    { icon: FaYoutube, url: "https://www.youtube.com/@AicNocorps", label: "YouTube" },
+    { icon: FaYoutube, url: "https://www.youtube.com/@NoCorpsINC", label: "YouTube" },
     { icon: FaFacebook, url: "https://www.facebook.com/nocorpsdev/", label: "Facebook" },
     { icon: FaTwitter, url: "https://x.com/nocorps_dev", label: "Twitter NoCorps" },
     // { icon: FaTwitter, url: "https://x.com/AIC_NC", label: "Twitter AIC" },
@@ -33,9 +33,12 @@ const Footer = () => {
             <a href="mailto:kanagaraj.developer@gmail.com" className="contact-link">
               <FaEnvelope /> kanagaraj.developer@gmail.com
             </a>
-            <a href="tel:+919500434845" className="contact-link">
-              <FaPhone /> +91 9500x xxxxx
+            <a href="mailto:sdheenadhayalan91@gmail.com" className="contact-link">
+              <FaEnvelope /> sdheenadhayalan91@gmail.com
             </a>
+            {/* <a href="tel:+919500434845" className="contact-link">
+              <FaPhone /> +91 9500x xxxxx
+            </a> */}
           </div>
         </div>
 
@@ -60,7 +63,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-section">
-          <h3>Serviceses</h3>
+          <h3>Services</h3>
           <div className="footer-links">
             {/* <Link to="https://pdftools.nocorps.org/">PDF Tools</Link> */}
             <a href="https://pdftools.nocorps.org/" target="_blank" rel="noopener noreferrer">PDF Tools</a>
@@ -87,7 +90,8 @@ const Footer = () => {
       </div>
 
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} NoCorps.org All rights reserved.</p>
+        {/* <p>&copy; {new Date().getFullYear()} NoCorps.org All rights reserved.</p> */}
+        <p>&copy; 2024 - 2025 NoCorps.org All rights reserved.</p>
       </div>
     </footer>
   );

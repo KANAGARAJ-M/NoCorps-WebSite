@@ -112,9 +112,9 @@ function Services() {
                             <h3>📱 Flutter App Development</h3>
                             <p>Build cross-platform mobile applications with a single codebase.</p>
                             <ul>
-                                <li>✅ Faster development & reduced costs</li>
-                                <li>✅ Native-like performance</li>
-                                <li>✅ Scalable & maintainable apps</li>
+                                <li> Faster development & reduced costs</li>
+                                <li> Native-like performance</li>
+                                <li> Scalable & maintainable apps</li>
                             </ul>
                         </div>
 
@@ -122,9 +122,9 @@ function Services() {
                             <h3>🌐 Web Development</h3>
                             <p>Modern, responsive, and SEO-friendly websites and web applications.</p>
                             <ul>
-                                <li>✅ Custom websites & web apps</li>
-                                <li>✅ Interactive & user-friendly UI/UX</li>
-                                <li>✅ High-performance & secure solutions</li>
+                                <li> Custom websites & web apps</li>
+                                <li> Interactive & user-friendly UI/UX</li>
+                                <li> High-performance & secure solutions</li>
                             </ul>
                         </div>
 
@@ -132,9 +132,9 @@ function Services() {
                             <h3>💻 Full-Stack Development</h3>
                             <p>Complete frontend & backend solutions for scalable applications.</p>
                             <ul>
-                                <li>✅ Backend: Node.js, Express, Firebase</li>
-                                <li>✅ Frontend: React.js, Next.js, Vue.js</li>
-                                <li>✅ API Development & Integrations</li>
+                                <li> Backend: Node.js, Express, Firebase</li>
+                                <li> Frontend: React.js, Next.js, Vue.js</li>
+                                <li> API Development & Integrations</li>
                             </ul>
                         </div>
 
@@ -142,9 +142,9 @@ function Services() {
                             <h3>🖥 Windows Application Development</h3>
                             <p>Custom desktop solutions for enhanced productivity.</p>
                             <ul>
-                                <li>✅ Enterprise software solutions</li>
-                                <li>✅ Business management tools</li>
-                                <li>✅ Secure & scalable desktop apps</li>
+                                <li> Enterprise software solutions</li>
+                                <li> Business management tools</li>
+                                <li> Secure & scalable desktop apps</li>
                             </ul>
                         </div>
                     </div>
